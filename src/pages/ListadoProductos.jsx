@@ -122,24 +122,26 @@ const ListadoProductos = () => {
       <ContenedorCardTabla>
         {productosFiltrados.map((productos)=>{
           return (
-          <ContenidoResponsive>
+          <ContenidoResponsive  key={productos._id}>
             <InfoCard>
               <span>{productos.nombre}{" - $"}{productos.valor}</span>
               <span>{productos.Estado.label}</span>
             </InfoCard>
-            <ActualizarCard>
-              <button className="iconSide edit" 
-                onClick={() => {
-                  history.push(`/editarProductos/${productos._id}`)}}
-              >
-                  <FontAwesomeIcon  icon={faPenAlt}/>
-              </button>
-              <button className="iconSide trash"
-                onClick={()=>{showAlert(productos._id)}}
-              >
-                    <FontAwesomeIcon icon={faTrashAlt}/>
-              </button>
-            </ActualizarCard>
+            <PrivateComponent roleList={['Administrador']}>
+              <ActualizarCard>
+                <button className="iconSide edit" 
+                  onClick={() => {
+                    history.push(`/editarProductos/${productos._id}`)}}
+                >
+                    <FontAwesomeIcon  icon={faPenAlt}/>
+                </button>
+                <button className="iconSide trash"
+                  onClick={()=>{showAlert(productos._id)}}
+                >
+                      <FontAwesomeIcon icon={faTrashAlt}/>
+                </button>
+              </ActualizarCard>
+            </PrivateComponent>
           </ContenidoResponsive>
           );
         })} 

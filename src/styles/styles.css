@@ -23,12 +23,15 @@ Aside {
 
 .burger {
   position: fixed;
-  margin: 10px 0 0 10px;
+  margin: 5px 0 0 3px;
   color: gray;
 }
 
 .responsive {
   background-color: #023047;
+  position: fixed;
+  z-index: 100;
+  border-bottom-right-radius: 20px;
 }
 
 .responsive .a {
@@ -155,6 +158,11 @@ div.content {
   height: 100%;
 }
 
+.mainContainerTable {
+  width: 70%;
+  margin: auto;
+}
+
 @media screen and (max-width: 700px) {
   .sidebar {
     visibility: hidden;
@@ -168,7 +176,7 @@ div.content {
     height: max-content;
   }
   .mainContainerTable{
-    margin: 0;
+    width: 90%;
   }
 }
 
@@ -181,7 +189,8 @@ div.content {
   }
 }
 .guiGestionUsuarios {
-  width: 100%;
+  max-width: 800px;
+  width: 90%;
   margin: auto;
   padding: 40px;
   background-color: whitesmoke;
@@ -204,10 +213,7 @@ input[type=number] {
   padding: 30px 0px 30px 0px;
 }
 
-.mainContainerTable {
-  width: 70%;
-  margin: auto;
-}
+
 
 .mainContainerTable .gypLdv{
   margin: 0;
@@ -230,7 +236,7 @@ input[type=number] {
   display: block;
   color: white;
   text-align: center;
-  margin-bottom: 30px;
+  margin:10px 0 20px 30px;
 }
 
 .TooltipEditar {
@@ -252,6 +258,11 @@ input[type=number] {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   transition: .3s ease all;
+}
+@media screen and (max-width:800px){
+  .inputBusqueda{
+    width: 100%;
+  }
 }
 .link-boton{
   text-decoration: none;

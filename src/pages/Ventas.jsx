@@ -67,7 +67,7 @@ import Swal from 'sweetalert2';
       <main className="mainContainerTable">
         <ContenedorBotonCentrado>
           <Boton>
-            <Link className="link-boton" to ="/CrearVentas">Crear venta</Link>
+            <Link className="link-boton" to ="/CrearVentas">Crear</Link>
           </Boton>
         </ContenedorBotonCentrado>
         <h2 className="tituloGestionVentas">Todas las ventas</h2>
@@ -114,8 +114,8 @@ import Swal from 'sweetalert2';
           return (
           <ContenidoResponsive>
             <InfoCard>
-              <span>{ventas.nombre}{" "}{ventas.apellido}</span>
-              <span>{ventas.documento}</span>
+              <span>{"Nombre: "}{ventas.nombre}{" "}{ventas.apellido}</span>
+              <span>{"Documento: "}{ventas.documento}</span>
             </InfoCard>
             <ActualizarCard>
               <button className="iconSide edit" 
